@@ -29,7 +29,7 @@ infrastructure
 * DevOps Culture
 * Continuous Integration/Continuous Deployment
 * Security
-* Linuxß
+* *Linuxß***
 
 References
 ----------
@@ -43,8 +43,9 @@ Work experience
 
 ####Cloud Solutions Architect
 Infrastructure Architect for cloud platform
-& major applications using cloud* Lead Infrastructure team building
-mobile checkout/POS solution
+& major applications using cloud
+
+* Lead Infrastructure team building mobile checkout/POS solution
 
 * Lead CI team building pipeline & deployment tooling for mobile POS &
 backend services
