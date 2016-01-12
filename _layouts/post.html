@@ -62,6 +62,9 @@
   						  <li><a href="#" class="disabled button big next">Next Post</a></li>
   						{% endif %}
   					</ul>
+            <!--Disqus comments-->
+            {% include comments.html %}
+            
 					</div>
 
 				<!-- Sidebar -->
@@ -85,7 +88,6 @@
 						{% include footer.html %}
 					</section>
 			</div>
-    {% include comments.html %}
 		<!-- Scripts -->
 		{% include scripts.html %}
 	</body>
