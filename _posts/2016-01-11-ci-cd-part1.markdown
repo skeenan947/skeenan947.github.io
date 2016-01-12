@@ -2,7 +2,7 @@
 layout: post
 title:  "Continuous Integration & Deployment in the Enterprise"
 date:   2016-01-11 21:00:53
-categories: continuous-integration
+categories: continuous_integration
 tags: continuous integration deployment jenkins travisci concourse
 image: /images/complexity.jpg
 comments: true
