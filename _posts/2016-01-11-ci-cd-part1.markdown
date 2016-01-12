@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Continuous Integration & Deployment in the Enterprise"
+date:   2016-01-11 21:00:53
+categories: continuous integration
+tags: continuous integration deployment
+image: /images/complexity.jpg
+---
+
+CI/CD in the enterprise
+
+CI/CD is a hot topic pretty much everywhere right now.  Projects are using Jenkins, Travis CI, GoCD, Concourse, you name it.  Tons of startups are coming along with their own flavors, or selling a "supported" version of one of the open source tools.  Everybody has a different flavor, which works well for their problems.  What I think is missing, though, is the ability to truly integrate pipelines in large environments.
+
+I know what you're thinking - integration tests are evil.  Every app should be a microservice that can function completely independently of all of the others in your ecosystem.  I started working on tools with this in mind, but quickly realized that this isn't always possible.  Especially when the app you're writing is the core of your business, you need to make sure that the suite of apps you're writing work together.  The ideal is to move away from this, but until you're able to get to nirvana, you need a way to integrate.  I'm torn at this idea, because I want to say that we should just force nirvana and everyone will follow, but what ends up happening is that code doesn't get tested well enough without some form of integration, and we shoot ourselves in the foot.  Also, what about contract testing - Not everybody does service versioning, and if you don't, or one of the products you need to talk with doesn't, then you need to be able to test that your contract with another app is still valid.  How do I do that if I can't quickly fire off a test when one of my upstream apps is released?
+
+Travis CI does an excellent job at allowing developers to stand up a build pipeline for a single app in a matter of minutes, and even to run some tests against the app, but it fails in two key areas.  Travis doesn't let you chain multiple "job steps" together into a pipeline.  There's no easy way to have multiple phases of a pipeline in Travis, and linking multiple applications together into an integrated pipeline would be a total hack.
+
+Jenkins is an awesome platform - it's incredibly flexible and has a ton of community support around it, but most pipelines created in it are hand-built.  Yes, Groupon did write DotCI, and it's awesome that they took the time to add support for dynamically configured/built pipelines, but it's very opinionated (Docker only, for starters), and because it is basically a hook from Jenkins into DotCI's engine, it doesn't really allow you to make much use of the huge world of Jenkins plugins, which ends up meaning that you can't make use of things like MultiJobs, which essentially means that using DotCI leaves you in the same boat that Travis does - awesome support for small tools that work completely independently from each other, but don't do well with integration tests - at the very least, I should be able to fire off a test of app B when app A has finished testing, if app B is dependent on app A.
+
+Concourse CI seems to do the best with this - Their YAML spec allows for multi-stage jobs, watching for changes in other apps and triggering from that, etc...  but there's no ecosystem around it, and the UI leaves a lot to be desired.  Writing in Concourse would mean doing a lot of plugin/tool development yourself unless you're writing a completely greenfield app...
+
+So, in the not-so-pretty world of enterprise IT, where there's a large proliferation of apps to integrate with, many of which don't do service versioning or follow strict contract rules and require integration tests, what do you do?  Write your own pipeline framework (maybe around Jenkins)?  Jump in with both feet and rewrite everything in Concourse, hoping it takes off?  Wait and stick with in-house tools that probably aren't as responsive as you want?  So many options, yet none of them do everything you want.  Our answer was to write something around Jenkins, but I'm sure yours is different.  Leave your ideas in the comments.
+
