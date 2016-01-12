@@ -8,8 +8,6 @@ image: /images/complexity.jpg
 comments: true
 ---
 
-CI/CD in the enterprise
-
 CI/CD is a hot topic pretty much everywhere right now.  Projects are using Jenkins, Travis CI, GoCD, Concourse, you name it.  Tons of startups are coming along with their own flavors, or selling a "supported" version of one of the open source tools.  Everybody has a different flavor, which works well for their problems.  What I think is missing, though, is the ability to truly integrate pipelines in large environments.
 
 I know what you're thinking - integration tests are evil.  Every app should be a microservice that can function completely independently of all of the others in your ecosystem.  I started working on tools with this in mind, but quickly realized that this isn't always possible.  Especially when the app you're writing is the core of your business, you need to make sure that the suite of apps you're writing work together.  The ideal is to move away from this, but until you're able to get to nirvana, you need a way to integrate.  I'm torn at this idea, because I want to say that we should just force nirvana and everyone will follow, but what ends up happening is that code doesn't get tested well enough without some form of integration, and we shoot ourselves in the foot.  Also, what about contract testing - Not everybody does service versioning, and if you don't, or one of the products you need to talk with doesn't, then you need to be able to test that your contract with another app is still valid.  How do I do that if I can't quickly fire off a test when one of my upstream apps is released?
