@@ -22,14 +22,13 @@ difficult problems
 Interests
 ---------
 
-* Cloud enterprise application architecture * applications and
-infrastructure
+* Cloud enterprise application architecture, applications, infrastructure
 * Infrastructure software development (Chef)
 * Infrastructure as as Service (Openstack, AWS, RackSpace, etc)
 * DevOps Culture
-* Continuous Integration/Continuous Deployment
+* Continuous Integration/Continuous Deployment (CI/CD)
 * Security
-* *Linuxß***
+* Linux
 
 References
 ----------
@@ -46,20 +45,14 @@ Infrastructure Architect for cloud platform
 & major applications using cloud
 
 * Lead Infrastructure team building mobile checkout/POS solution
-
 * Lead CI team building pipeline & deployment tooling for mobile POS &
 backend services
-
 * Ran a successful POC of Ceph for object & block storage in internal
 OpenStack cloud
-
 * Implemented chef-driven software load balancing (HAProxy/Keepalived)
 to automate VIP creation for micro services
-
 * Contributed daily to base cookbooks running all Gap shared infrastructure
-
 * Built automated single-node Hadoop dev cluster build tools
-
 * Built Jenkins pipeline, replacing old ElectricCloud pipeline -
 improved pipeline performance 10x
 
