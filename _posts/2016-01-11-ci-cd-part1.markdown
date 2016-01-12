@@ -5,6 +5,7 @@ date:   2016-01-11 21:00:53
 categories: continuous integration
 tags: continuous integration deployment
 image: /images/complexity.jpg
+comments: true
 ---
 
 CI/CD in the enterprise
