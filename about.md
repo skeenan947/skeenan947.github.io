@@ -2,7 +2,7 @@
 layout: no-about-page
 title: About
 permalink: /about/
-image: /images/about.jpg
+image: images/about.jpg
 ---
 
 Shaun Keenan is an infrastructure and CI/CD architect.  He's currently employed at GapLabs.
