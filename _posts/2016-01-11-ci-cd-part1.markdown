@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Continuous Integration & Deployment in the Enterprise"
+title:  "Continuous Integration & Deployment in the Enterprise - Part 1"
 date:   2016-01-11 21:00:53
 categories: CI/CD
 tags: continuous integration deployment jenkins travisci concourse
@@ -16,7 +16,7 @@ Travis CI does an excellent job at allowing developers to stand up a build pipel
 
 Jenkins is an awesome platform - it's incredibly flexible and has a ton of community support around it, but most pipelines created in it are hand-built.  Yes, Groupon did write DotCI, and it's awesome that they took the time to add support for dynamically configured/built pipelines, but it's very opinionated (Docker only, for starters), and because it is basically a hook from Jenkins into DotCI's engine, it doesn't really allow you to make much use of the huge world of Jenkins plugins, which ends up meaning that you can't make use of things like MultiJobs, which essentially means that using DotCI leaves you in the same boat that Travis does - awesome support for small tools that work completely independently from each other, but don't do well with integration tests - at the very least, I should be able to fire off a test of app B when app A has finished testing, if app B is dependent on app A.
 
-Concourse CI seems to do the best with this - Their YAML spec allows for multi-stage jobs, watching for changes in other apps and triggering from that, etc...  but there's no ecosystem around it, and the UI leaves a lot to be desired.  Writing in Concourse would mean doing a lot of plugin/tool development yourself unless you're writing a completely greenfield app...
+Concourse CI seems to do the best with this - Their YAML spec allows for multi-stage jobs, watching for changes in other apps and triggering from that, etc...  but there's no ecosystem around it, and the UI leaves a lot to be desired.  Writing in Concourse would mean doing a lot of plugin/tool development yourself unless you're writing a completely greenfield app.
 
-So, in the not-so-pretty world of enterprise IT, where there's a large proliferation of apps to integrate with, many of which don't do service versioning or follow strict contract rules and require integration tests, what do you do?  Write your own pipeline framework (maybe around Jenkins)?  Jump in with both feet and rewrite everything in Concourse, hoping it takes off?  Wait and stick with in-house tools that probably aren't as responsive as you want?  So many options, yet none of them do everything you want.  Our answer was to write something around Jenkins, but I'm sure yours is different.  Leave your ideas in the comments.
+So, in the not-so-pretty world of enterprise IT, where there's a large proliferation of apps to integrate with, many of which don't do service versioning or follow strict contract rules and require integration tests, what do you do?  Write your own pipeline framework (maybe around Jenkins)?  Jump in with both feet and rewrite everything in Concourse, hoping it takes off?  Wait and stick with in-house tools that probably aren't as responsive as you want?  So many options, yet none of them do everything you want.  My team's answer was to write something in Jenkins, but I'm sure yours is different.  Leave your ideas in the comments.  More to come in the next post.
 
