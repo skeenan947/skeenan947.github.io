@@ -4,7 +4,7 @@ title:  "Continuous Integration & Deployment in the Enterprise - Part 1"
 date:   2016-01-11 21:00:53
 categories: CI/CD
 tags: continuous integration deployment jenkins travisci concourse
-image: images/complexity.jpg
+image: /images/complexity.jpg
 comments: true
 ---
 

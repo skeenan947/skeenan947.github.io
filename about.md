@@ -11,4 +11,4 @@ Shaun is passionate about DevOps culture, Chef, Jenkins, and all things PaaS & I
 
 In his spare time, Shaun volunteers at his church, San Ramon Valley Bible Church, as the "IT guy", and also enjoys running the live video streaming system and coordinating all of the video broadcast engineers.  Shaun is happily married to Lydia Keenan, and loves trying (and cooking) new foods, traveling, and ranting about tech to anybody who will listen.
 
-Find my resume @ http://skeenan.net/resume
+Find my resume @ [skeenan.net/resume](http://skeenan.net/resume)
