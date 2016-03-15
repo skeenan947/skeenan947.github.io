@@ -22,13 +22,11 @@ difficult problems
 Interests
 ---------
 
+* Continuous Integration/Continuous Deployment (CI/CD)
 * Cloud enterprise application architecture, applications, infrastructure
 * Infrastructure software development (Chef)
 * Infrastructure as as Service (Openstack, AWS, RackSpace, etc)
 * DevOps Culture
-* Continuous Integration/Continuous Deployment (CI/CD)
-* Security
-* Linux
 
 References
 ----------
@@ -40,27 +38,24 @@ Work experience
 
 ### Gap, Inc March 2014 — Present
 
-####Cloud Solutions Architect
-Infrastructure Architect for cloud platform
-& major applications using cloud
+####Principal Architect
+Infrastructure Architect for CI/CD and major applications on private cloud
 
 * Lead Infrastructure team building mobile checkout/POS solution
 * Lead CI team building pipeline & deployment tooling for mobile POS &
 backend services
-* Ran a successful POC of Ceph for object & block storage in internal
-OpenStack cloud
-* Implemented chef-driven software load balancing (HAProxy/Keepalived)
+* Implemented Chef-driven software load balancing (HAProxy/Keepalived)
 to automate VIP creation for micro services
 * Contributed daily to base cookbooks running all Gap shared infrastructure
 * Built automated single-node Hadoop dev cluster build tools
-* Built Jenkins pipeline, replacing old ElectricCloud pipeline -
+* Built YAML-based Jenkins pipeline, replacing old ElectricCloud pipeline -
 improved pipeline performance 10x
 
 **Tools used daily:**
+Jenkins, Gradle, Pivotal Cloud Foundry, Docker,
 OpenStack (keystone, nova, neutron, glance, swift), Cloud-Init,
-Chef, Veewee, Packer, Kitchen, Vagrant, Berkshelf,
-GitHub Enterprise,
-Jenkins
+Chef, Packer, Test-Kitchen, Vagrant, Berkshelf,
+GitHub Enterprise
 
 POC's: Ceph, Consul, Terraform, Chef Delivery
 
@@ -69,7 +64,7 @@ POC's: Ceph, Consul, Terraform, Chef Delivery
 ####Team Lead/Product Owner
 
 Took on a lead/product owner position for an
-internal product team at Salesforce.  Responsible for working with
+internal product team at Salesforce. Responsible for working with
 stakeholders & internal clients to define requirements for projects,
 prioritize, and work with engineers to deliver final product to
 requesting teams.Led team in architecture design, review, and
