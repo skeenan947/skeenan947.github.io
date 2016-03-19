@@ -170,7 +170,7 @@ Assisted in triage for internal outages & performance issues
 
 ### Ask for full resume for previous jobs 1997 — 2005
 
-Ask for full resume for previous jobs
+Ask for full resume for previous jobs.  Did lots of web app development during these years
 
 Education
 ---------
