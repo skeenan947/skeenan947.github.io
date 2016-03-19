@@ -24,8 +24,8 @@ Interests
 
 * Continuous Integration/Continuous Deployment (CI/CD)
 * Cloud enterprise application architecture, applications, infrastructure
-* Infrastructure software development (Chef)
-* Infrastructure as as Service (Openstack, AWS, RackSpace, etc)
+* Infrastructure software development (Chef, Puppet, Ansible)
+* Infrastructure as as Service (Openstack, AWS, GCE, etc)
 * Containerization (Docker)
 * DevOps Culture
 
@@ -45,12 +45,14 @@ Infrastructure Architect for CI/CD and major applications on private cloud
 * Lead Infrastructure team building mobile checkout/POS solution
 * Lead CI team building pipeline & deployment tooling for mobile POS &
 backend services
+* Deploy Next-Gen POS system (iOS, Angular, Java microservices) to 7500+ stores
 * Implemented Chef-driven software load balancing (HAProxy/Keepalived)
 to automate VIP creation for micro services
 * Contributed daily to base cookbooks running all Gap shared infrastructure
 * Built automated single-node Hadoop dev cluster build tools
 * Built YAML-based Jenkins pipeline, replacing old ElectricCloud pipeline -
 improved pipeline performance 10x
+* Mentor 40+ teams moving applications & CI pipelines to cloud services (OpenStack, Cloud Foundry)
 
 **Tools used daily:**
 Jenkins, Gradle, Pivotal Cloud Foundry, Docker,
