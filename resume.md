@@ -26,6 +26,7 @@ Interests
 * Cloud enterprise application architecture, applications, infrastructure
 * Infrastructure software development (Chef)
 * Infrastructure as as Service (Openstack, AWS, RackSpace, etc)
+* Containerization (Docker)
 * DevOps Culture
 
 References
