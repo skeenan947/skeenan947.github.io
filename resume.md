@@ -24,10 +24,10 @@ Interests
 
 * Continuous Integration/Continuous Deployment (CI/CD)
 * Cloud enterprise application architecture, applications, infrastructure
-* Infrastructure software development (Chef, Puppet, Ansible)
 * Infrastructure as as Service (Openstack, AWS, GCE, etc)
 * Containerization (Docker)
 * DevOps Culture
+* Infrastructure development/automation (Chef, Puppet, Ansible)
 
 References
 ----------
@@ -39,39 +39,33 @@ Work experience
 
 ### Gap, Inc March 2014 — Present
 
-####Principal Architect
-Infrastructure Architect for CI/CD and major applications on private cloud
+####Cloud Architect (Director)
+Cloud Architect for PaaS, IaaS, CI/CD
 
+* Architecture & strategy for Pivotal Cloud Foundry deployment & usage best practices
+* Built YAML-based Jenkins pipeline, replacing old ElectricCloud pipeline -
+improved pipeline performance >10x
+* Mentor 40+ teams moving applications & CI pipelines to cloud services (OpenStack, Cloud Foundry)
 * Lead Infrastructure team building mobile checkout/POS solution
 * Lead CI team building pipeline & deployment tooling for mobile POS &
 backend services
 * Deploy Next-Gen POS system (iOS, Angular, Java microservices) to 7500+ stores
-* Implemented Chef-driven software load balancing (HAProxy/Keepalived)
-to automate VIP creation for micro services
-* Contributed daily to base cookbooks running all Gap shared infrastructure
-* Built automated single-node Hadoop dev cluster build tools
-* Built YAML-based Jenkins pipeline, replacing old ElectricCloud pipeline -
-improved pipeline performance 10x
-* Mentor 40+ teams moving applications & CI pipelines to cloud services (OpenStack, Cloud Foundry)
 
 **Tools used daily:**
-Jenkins, Gradle, Pivotal Cloud Foundry, Docker,
-OpenStack (keystone, nova, neutron, glance, swift), Cloud-Init,
-Chef, Packer, Test-Kitchen, Vagrant, Berkshelf,
+Jenkins, Gradle, Cloud Foundry, Docker,
+OpenStack (nova, neutron, glance, swift, cinder), Cloud Init,
+Chef, Vagrant, Berkshelf,
 GitHub Enterprise
-
-POC's: Ceph, Consul, Terraform, Chef Delivery
 
 ### Salesforce.com January 2013 — February 2014
 
-####Team Lead/Product Owner
+####Architect/Product Owner
 
-Took on a lead/product owner position for an
-internal product team at Salesforce. Responsible for working with
+Led an internal product team at Salesforce. Responsible for working with
 stakeholders & internal clients to define requirements for projects,
 prioritize, and work with engineers to deliver final product to
-requesting teams.Led team in architecture design, review, and
-implementation, working closely with management and project managers
+requesting teams.  Led team in architecture design, review, and
+implementation, working closely with management and client teams
 
 ### Salesforce.com October 2009 — January 2013
 
