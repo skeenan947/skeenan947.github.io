@@ -29,11 +29,6 @@ Interests
 * DevOps Culture
 * Infrastructure development/automation (Chef, Puppet, Ansible)
 
-References
-----------
-
-References available upon request.
-
 Work experience
 ---------------
 
