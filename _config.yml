@@ -3,7 +3,7 @@ email: me@skeenan.net
 description: > # this means to ignore newlines until "baseurl:"
   Shaun Keenan's rants about technology
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blog.skeenan.net" # the base hostname & protocol for your site
+url: "http://skeenan.net" # the base hostname & protocol for your site
 twitter_username: skeenan2501
 github_username:  skeenan947
 
