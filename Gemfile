@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
-gem 'jekyll', '>3.0'
-
-gem 'jekyll-paginate', '>1.0.0'
+group :test do
+  gem 'serverspec', '2.29.1'
+  gem 'docker-api', '1.26.0'
+  gem 'rake', '10.4.2'
+end
