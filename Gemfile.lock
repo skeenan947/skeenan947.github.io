@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     diff-lcs (1.2.5)
     docker-api (1.26.0)
@@ -50,4 +50,4 @@ DEPENDENCIES
   serverspec (= 2.29.1)
 
 BUNDLED WITH
-   1.11.2
+   1.13.0

@@ -1,8 +1,15 @@
 require 'serverspec'
+require 'docker'
 
-describe 'Dockerfile' do
+describe 'site/Dockerfile' do
+  image = Docker::Image.build_from_dir('site')
+  
+  set :os, family: :debian
+  set :backend, :docker
+  set :docker_image, image.id
+  
   it 'should install the right version of nginx' do
-    expect(nginx_version).to include('1.10')
+    expect(nginx_version).to include('1.12')
   end
   
   it 'should have a resume available' do

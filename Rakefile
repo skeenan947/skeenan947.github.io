@@ -5,7 +5,7 @@ require 'json'
 require 'uri'
 
 IMAGE_NAME = 'skeenan/skeenan.net'
-IMAGE_VERSION = '1.0'
+IMAGE_VERSION = '1.1'
 
 def run_command(command)
   IO.popen(command) do |data|
@@ -17,16 +17,9 @@ end
 
 def build
   builder = Docker::Image.build_from_dir('site')
-  system("rm -rf \"#{File.dirname(__FILE__)}/nginx/_site\"")
-  Dir.mkdir(File.dirname(__FILE__) + '/nginx/_site')
   container = Docker::Container.create('Image' => builder.id)
-  container.start()
-  container.wait()
-  run_command("docker cp #{container.id}:/_site nginx/_site")
   container.delete(:force => true)
-  builder.delete()
-
-  Docker::Image.build_from_dir('nginx')
+  builder
 end
 
 def published_versions
@@ -57,7 +50,9 @@ end
 desc 'Build Image from the Dockerfile'
 task :build => [:docker_env] do |t, args|
   image = build()
-  puts image.id
+  tag = image.tag('repo' => "#{IMAGE_NAME}", 'tag' => "#{IMAGE_VERSION}")
+  puts tag
+  image.id
 end
 
 desc 'Run the Image'
@@ -69,13 +64,12 @@ task :run => [:docker_env] do |t, args|
 end
 
 desc 'Publish The Image'
-task :publish => [:spec] do |t, args|
+task :publish => [:spec, :build] do |t, args|
   existing_tags = published_versions()
   if existing_tags[:tags].member? IMAGE_VERSION
     abort("The version #{IMAGE_VERSION} has already been published.")
   end
   image = build
-  image.tag('repo' => "#{IMAGE_NAME}", 'tag' => "#{IMAGE_VERSION}")
   image.tag('repo' => "#{IMAGE_NAME}", 'tag' => "latest", force: true)
 
   run_command("docker push #{IMAGE_NAME}:#{IMAGE_VERSION}")
