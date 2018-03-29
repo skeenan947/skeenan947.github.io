@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+  traefik:
+    build: traefik
+    command: --logLevel=DEBUG
+    labels:
+      - "traefik.docker.network=traefik"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "127.0.0.1:8080:8080"
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - traefik
+    cap_drop:
+      - all
+    cap_add:
+      - net_bind_service
+  www:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=www"
+      - "traefik.frontend.rule=Host:quark.skeenan.net"
+      - "traefik.docker.network=traefik"
+    build: site
+    image: skeenan/skeenan.net
+    networks:
+      - traefik
+    restart: always
+networks:
+  traefik:
